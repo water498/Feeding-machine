@@ -1,0 +1,11 @@
+AC_INIT(Feedmachine,1.0.0, raccoon1234@naver.com)
+
+AC_PROG_CC
+AC_PROG_CPP
+
+AC_TYPE_SIZE_T
+AC_STRUCT_TM
+
+
+AC_CONFIG_FILES([Makefile])
+AC_OUTPUT

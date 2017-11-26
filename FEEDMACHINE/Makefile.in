@@ -1,0 +1,16 @@
+C	= @CC@
+CPP	= @CPP@
+CFLAGS	= @CFLAGS@
+DEFS	= @DEFS@
+LIB	= @LIBS@
+
+Feedmachine : main.c
+ifeq ($(CC), gcc)
+	@echo "C compiler is GNU gcc!"
+else
+	@echo "c Compiler is $(CC)!"
+endif
+	$(CC) $(CFLAGS) $(DEFS) $(LIBS) -o Feedmachine main.c -L./ -lfeed -lpthread && echo "finish!"
+	
+clean :
+	-rm -rf Feedmachine
